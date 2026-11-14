@@ -1,0 +1,644 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نظام اختيار المواقع التناظرية الأرضية</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div data-safe-area-inset-root="true" dir="rtl" lang="ar" style="box-sizing: border-box; padding-top: var(--safe-area-inset-top); min-height: 100vh; background: var(--bg); color: var(--text); overflow-x: clip">
+  <header data-safe-area-sticky-top="true" style="top: var(--safe-area-inset-top); position: sticky; z-index: 30; background: rgba(7,11,18,.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line)">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 16px 16px 14px">
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between">
+        <div style="display: flex; gap: 12px; align-items: center">
+          <div style="width: 46px; height: 46px; border-radius: 14px; background: var(--primary); color: var(--primary-ink); display: grid; place-items: center; font-weight: 900; font-size: 22px">◐</div>
+          <div>
+            <h1 style="margin: 0; font-size: clamp(20px, 4.5vw, 32px); line-height: 1.15; font-weight: 900">نظام اختيار المواقع التناظرية الأرضية</h1>
+            <p style="margin: 4px 0 0; color: var(--accent); font-weight: 700; font-size: 13px">Terrestrial Analogue Selection System <span style="color: var(--muted)">• NASA Space Apps Cairo 2026</span></p>
+          </div>
+        </div>
+        <span style="background: var(--surface-3); border: 1px solid var(--line); padding: 7px 12px; border-radius: 999px; font-size: 12px; font-weight: 700">الوظيفة التناظرية (Functional Analogue)</span>
+      </div>
+      <p style="margin: 14px 0 0; color: var(--muted); line-height: 1.9; max-width: 920px">لا يوجد موقع أرضي يطابق القمر في كل شيء. اختر هدف التجربة، اضبط الأولويات من 1 إلى 5، ثم أدخل بيانات الموقع لمقارنتها بمراجع تعليمية من أبولو 14 وشاكلتون وجيزيرو وجيل.</p>
+    </div>
+  </header>
+  <main style="max-width: 1180px; margin: 0 auto; padding: 22px 16px 40px">
+    <section aria-label="اختيار نوع التجربة" style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 20px">
+      <div style="display: flex; gap: 10px; align-items: center">
+        <span style="background: var(--primary); color: var(--primary-ink); min-width: 30px; height: 30px; border-radius: 999px; display: grid; place-items: center; font-weight: 900">1</span>
+        <h2 style="margin: 0; font-size: clamp(19px, 4vw, 25px)">اختَر نوع التجربة <span style="color: var(--muted); font-size: 14px; font-weight: 600">(Experiment Type)</span></h2>
+      </div>
+      <p style="color: var(--muted); margin: 10px 0 16px; line-height: 1.7">هذه اقتراحات فقط — يمكنك تعديل المنزلقات بعد ذلك بحرية.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px"><button aria-pressed="true" style="text-align: start; cursor: pointer; background: var(--primary); color: var(--primary-ink); border: 2px solid var(--primary); border-radius: 16px; padding: 16px"><div style="display: flex; justify-content: space-between; align-items: center; font-weight: 800"><span>استخراج موارد وبناء ISRU</span><!-- <CheckCircle2 /> --></div><p style="margin: 8px 0 0; font-size: 13px; line-height: 1.7; opacity: 0.85">أولوية للكيمياء والمعادن لأن الهدف إنتاج مواد من التربة المحلية.</p></button><button aria-pressed="false" style="text-align: start; cursor: pointer; background: var(--surface-2); color: var(--text); border: 1px solid var(--line); border-radius: 16px; padding: 16px"><div style="display: flex; justify-content: space-between; align-items: center; font-weight: 800"><span>اختبار Rover Mobility</span></div><p style="margin: 8px 0 0; font-size: 13px; line-height: 1.7; opacity: 0.7">أولوية لحجم الحبيبات والتضاريس لأن الهدف حركة العجلات والثبات.</p></button><button aria-pressed="false" style="text-align: start; cursor: pointer; background: var(--surface-2); color: var(--text); border: 1px solid var(--line); border-radius: 16px; padding: 16px"><div style="display: flex; justify-content: space-between; align-items: center; font-weight: 800"><span>تدريب رواد فضاء EVA</span></div><p style="margin: 8px 0 0; font-size: 13px; line-height: 1.7; opacity: 0.7">أولوية للبيئة والتضاريس لأن الهدف تدريب ميداني واقعي وآمن.</p></button></div>
+    </section>
+    <section aria-label="أولوية المعايير" style="margin-top: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 20px">
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center">
+        <div style="display: flex; gap: 10px; align-items: center">
+          <span style="background: var(--primary); color: var(--primary-ink); min-width: 30px; height: 30px; border-radius: 999px; display: grid; place-items: center; font-weight: 900">2</span>
+          <h2 style="margin: 0; font-size: clamp(19px, 4vw, 25px)">حدِّد أولوية المعايير <span style="color: var(--muted); font-size: 14px; font-weight: 600">(Criteria Priority)</span></h2>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap"><button style="background: var(--surface-3); color: var(--text); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; cursor: pointer; font-weight: 700">تطبيع المجموع إلى 100%</button><button style="background: transparent; color: var(--accent); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; cursor: pointer; font-weight: 700">توزيع متساوٍ تقريبًا</button></div>
+      </div>
+      <div id="weights-summary" role="status" aria-live="polite" style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; background: rgba(52,211,153,.12); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px"><strong>مجموع الأولويات: <span class="mono">18 / 30</span></strong><span style="color: var(--muted)">اختر مستوى من 1 إلى 5 لكل معيار؛ 5 يعني أعلى أولوية.</span></div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 18px; margin-top: 18px"><label style="background: var(--surface-2); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: block"><div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span style="display: flex; gap: 8px; align-items: center; font-weight: 800"><!-- <FlaskConical /> --><span>الكيمياء <small style="color: var(--muted); font-weight: 600">(Chemistry)</small></span></span><span class="mono" style="background: var(--primary); color: var(--primary-ink); padding: 3px 10px; border-radius: 999px; font-weight: 800">30%</span></div><input aria-label="الكيمياء Chemistry" type="range" min="0" max="100" value="30" style="--fill: 30%; margin-top: 14px"><div style="display: flex; justify-content: space-between; color: var(--muted-2); font-size: 12px"><span>0%</span><span>الوزن المُطبَّع: {(normalized[c.key] * 100).toFixed(1)}%</span><span>100%</span></div></label><label style="background: var(--surface-2); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: block"><div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span style="display: flex; gap: 8px; align-items: center; font-weight: 800"><!-- <Beaker /> --><span>المعدنية <small style="color: var(--muted); font-weight: 600">(Mineralogy)</small></span></span><span class="mono" style="background: var(--primary); color: var(--primary-ink); padding: 3px 10px; border-radius: 999px; font-weight: 800">25%</span></div><input aria-label="المعدنية Mineralogy" type="range" min="0" max="100" value="25" style="--fill: 25%; margin-top: 14px"><div style="display: flex; justify-content: space-between; color: var(--muted-2); font-size: 12px"><span>0%</span><span>الوزن المُطبَّع: {(normalized[c.key] * 100).toFixed(1)}%</span><span>100%</span></div></label><label style="background: var(--surface-2); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: block"><div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span style="display: flex; gap: 8px; align-items: center; font-weight: 800"><!-- <Wind /> --><span>الفيزيائية <small style="color: var(--muted); font-weight: 600">(Physical)</small></span></span><span class="mono" style="background: var(--primary); color: var(--primary-ink); padding: 3px 10px; border-radius: 999px; font-weight: 800">15%</span></div><input aria-label="الفيزيائية Physical" type="range" min="0" max="100" value="15" style="--fill: 15%; margin-top: 14px"><div style="display: flex; justify-content: space-between; color: var(--muted-2); font-size: 12px"><span>0%</span><span>الوزن المُطبَّع: {(normalized[c.key] * 100).toFixed(1)}%</span><span>100%</span></div></label><label style="background: var(--surface-2); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: block"><div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span style="display: flex; gap: 8px; align-items: center; font-weight: 800"><!-- <Thermometer /> --><span>البيئة <small style="color: var(--muted); font-weight: 600">(Environment)</small></span></span><span class="mono" style="background: var(--primary); color: var(--primary-ink); padding: 3px 10px; border-radius: 999px; font-weight: 800">10%</span></div><input aria-label="البيئة Environment" type="range" min="0" max="100" value="10" style="--fill: 10%; margin-top: 14px"><div style="display: flex; justify-content: space-between; color: var(--muted-2); font-size: 12px"><span>0%</span><span>الوزن المُطبَّع: {(normalized[c.key] * 100).toFixed(1)}%</span><span>100%</span></div></label><label style="background: var(--surface-2); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: block"><div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span style="display: flex; gap: 8px; align-items: center; font-weight: 800"><!-- <Satellite /> --><span>تغطية RADARSAT <small style="color: var(--muted); font-weight: 600">(RADARSAT Coverage)</small></span></span><span class="mono" style="background: var(--primary); color: var(--primary-ink); padding: 3px 10px; border-radius: 999px; font-weight: 800">5%</span></div><input aria-label="تغطية RADARSAT RADARSAT Coverage" type="range" min="0" max="100" value="5" style="--fill: 5%; margin-top: 14px"><div style="display: flex; justify-content: space-between; color: var(--muted-2); font-size: 12px"><span>0%</span><span>الوزن المُطبَّع: {(normalized[c.key] * 100).toFixed(1)}%</span><span>100%</span></div></label><label style="background: var(--surface-2); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: block"><div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span style="display: flex; gap: 8px; align-items: center; font-weight: 800"><!-- <Mountain /> --><span>التضاريس <small style="color: var(--muted); font-weight: 600">(Terrain)</small></span></span><span class="mono" style="background: var(--primary); color: var(--primary-ink); padding: 3px 10px; border-radius: 999px; font-weight: 800">15%</span></div><input aria-label="التضاريس Terrain" type="range" min="0" max="100" value="15" style="--fill: 15%; margin-top: 14px"><div style="display: flex; justify-content: space-between; color: var(--muted-2); font-size: 12px"><span>0%</span><span>الوزن المُطبَّع: {(normalized[c.key] * 100).toFixed(1)}%</span><span>100%</span></div></label></div>
+    </section>
+    <section aria-label="بيانات الموقع الأرضي" style="margin-top: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 20px">
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center">
+        <div style="display: flex; gap: 10px; align-items: center">
+          <span style="background: var(--primary); color: var(--primary-ink); min-width: 30px; height: 30px; border-radius: 999px; display: grid; place-items: center; font-weight: 900">3</span>
+          <h2 style="margin: 0; font-size: clamp(19px, 4vw, 25px)">بيانات الموقع الأرضي <span style="color: var(--muted); font-size: 14px; font-weight: 600">(Terrestrial Site Data)</span></h2>
+        </div>
+        <span style="background: rgba(251,191,36,.15); color: var(--yellow); padding: 7px 12px; border-radius: 999px; font-weight: 800; font-size: 13px">غير موثَّق (Unverified) — أكمل الحقول</span>
+      </div>
+      <div style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px"><button style="background: var(--primary); color: var(--primary-ink); border: none; border-radius: 999px; padding: 10px 16px; font-weight: 800; cursor: pointer">حمِّل مثالًا جاهزًا (الواحات البحرية)</button><button style="background: var(--surface-3); color: var(--text); border: 1px solid var(--line); border-radius: 999px; padding: 10px 16px; font-weight: 700; cursor: pointer">مسح النموذج</button></div>
+      <div style="margin-top: 14px">
+        <p style="margin: 0 0 8px; font-weight: 800">مواقع جاهزة <span style="color: var(--muted); font-weight: 600">(Ready Sites)</span></p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px"><button style="background: var(--surface-2); color: var(--text); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; cursor: pointer; font-weight: 700">جبل إتنا</button><button style="background: var(--surface-2); color: var(--text); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; cursor: pointer; font-weight: 700">أتاكاما</button><button style="background: var(--surface-2); color: var(--text); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; cursor: pointer; font-weight: 700">جزيرة ديفون</button><button style="background: var(--surface-2); color: var(--text); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; cursor: pointer; font-weight: 700">وادي الحيتان</button><button style="background: var(--surface-2); color: var(--text); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; cursor: pointer; font-weight: 700">الواحات البحرية</button></div>
+      </div>
+      <div style="margin-top: 16px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 14px; padding: 14px">
+        <p style="margin: 0 0 6px; font-weight: 800">الخريطة غير متوفرة.</p>
+        <p style="margin: 0; color: var(--muted); line-height: 1.7; font-size: 13px">اختر موقعًا جاهزًا بالأعلى أو أدخل خط العرض وخط الطول يدويًا. قائمة المواقع الجاهزة تعرض الإحداثيات والبيانات المعتمدة لكل موقع.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 10px; margin-top: 12px">
+          <div style="background: #0a1120; border: 1px solid var(--line); border-radius: 12px; padding: 12px">
+            <strong style="font-size: 13px">جبل إتنا (Mount Etna)</strong>
+            <div class="mono" style="color: var(--accent); font-size: 12px; margin-top: 4px">37.75°, 14.99°</div>
+            <p style="margin: 6px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6">تربة بركانية بازلتية نشطة.</p>
+          </div>
+          <div style="background: #0a1120; border: 1px solid var(--line); border-radius: 12px; padding: 12px">
+            <strong style="font-size: 13px">صحراء أتاكاما (Atacama)</strong>
+            <div class="mono" style="color: var(--accent); font-size: 12px; margin-top: 4px">-23.50°, -68.20°</div>
+            <p style="margin: 6px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6">جفاف شديد يشبه البيئات القاحلة.</p>
+          </div>
+          <div style="background: #0a1120; border: 1px solid var(--line); border-radius: 12px; padding: 12px">
+            <strong style="font-size: 13px">جزيرة ديفون (Devon Island)</strong>
+            <div class="mono" style="color: var(--accent); font-size: 12px; margin-top: 4px">75.30°, -84.60°</div>
+            <p style="margin: 6px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6">فوهة صدمية وبرد قارس.</p>
+          </div>
+          <div style="background: #0a1120; border: 1px solid var(--line); border-radius: 12px; padding: 12px">
+            <strong style="font-size: 13px">وادي الحيتان (Wadi Al-Hitan)</strong>
+            <div class="mono" style="color: var(--accent); font-size: 12px; margin-top: 4px">29.27°, 30.02°</div>
+            <p style="margin: 6px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6">تضاريس رسوبية مفتوحة.</p>
+          </div>
+          <div style="background: #0a1120; border: 1px solid var(--line); border-radius: 12px; padding: 12px">
+            <strong style="font-size: 13px">الواحات البحرية (Bahariya Oasis)</strong>
+            <div class="mono" style="color: var(--accent); font-size: 12px; margin-top: 4px">28.35°, 28.88°</div>
+            <p style="margin: 6px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6">مثال جاهز: رمال وتلال سوداء.</p>
+          </div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 14px; margin-top: 18px"><label style="display: block"><span style="display: block; font-weight: 800; font-size: 14px; margin-bottom: 6px">اسم الموقع <span style="color: var(--muted); font-weight: 600">(Site Name)</span> <span style="color: var(--accent); font-size: 12px">• —</span></span><input type="text" inputmode="decimal" value="" placeholder="مثال: الواحات البحرية" aria-label="اسم الموقع Site Name"></label><label style="display: block"><span style="display: block; font-weight: 800; font-size: 14px; margin-bottom: 6px">خط العرض <span style="color: var(--muted); font-weight: 600">(Latitude)</span> <span style="color: var(--accent); font-size: 12px">• °</span></span><input type="text" inputmode="decimal" value="" placeholder="مثال: 28.35" aria-label="خط العرض Latitude"></label><label style="display: block"><span style="display: block; font-weight: 800; font-size: 14px; margin-bottom: 6px">خط الطول <span style="color: var(--muted); font-weight: 600">(Longitude)</span> <span style="color: var(--accent); font-size: 12px">• °</span></span><input type="text" inputmode="decimal" value="" placeholder="مثال: 28.88" aria-label="خط الطول Longitude"></label><label style="display: block"><span style="display: block; font-weight: 800; font-size: 14px; margin-bottom: 6px">السيليكا <span style="color: var(--muted); font-weight: 600">(SiO2)</span> <span style="color: var(--accent); font-size: 12px">• % wt</span></span><input type="text" inputmode="decimal" value="" placeholder="مثال: 52.0" aria-label="السيليكا SiO2"></label><label style="display: block"><span style="display: block; font-weight: 800; font-size: 14px; margin-bottom: 6px">الألومينا <span style="color: var(--muted); font-weight: 600">(Al2O3)</span> <span style="color: var(--accent); font-size: 12px">• % wt</span></span><input type="text" inputmode="decimal" value="" placeholder="مثال: 14.0" aria-label="الألومينا Al2O3"></label><label style="display: block"><span style="display: block; font-weight: 800; font-size: 14px; margin-bottom: 6px">أكسيد التيتانيوم <span style="color: var(--muted); font-weight: 600">(TiO2)</span> <span style="color: var(--accent); font-size: 12px">• % wt</span></span><input type="text" inputmode="decimal" value="" placeholder="مثال: 1.2" aria-label="أكسيد التيتانيوم TiO2"></label><label style="display: block"><span style="display: block; font-weight: 800; font-size: 14px; margin-bottom: 6px">أكسيد الحديد <span style="color: var(--muted); font-weight: 600">(FeO)</span> <span style="color: var(--accent); font-size: 12px">• % wt</span></span><input type="text" inputmode="decimal" value="" placeholder="مثال: 9.0" aria-label="أكسيد الحديد FeO"></label><label style="display: block"><span style="display: block; font-weight: 800; font-size: 14px; margin-bottom: 6px">أكسيد الكالسيوم <span style="color: var(--muted); font-weight: 600">(CaO)</span> <span style="color: var(--accent); font-size: 12px">• % wt</span></span><input type="text" inputmode="decimal" value="" placeholder="مثال: 8.0" aria-label="أكسيد الكالسيوم CaO"></label><label style="display: block"><span style="display: block; font-weight: 800; font-size: 14px; margin-bottom: 6px">الزجاج البركاني <span style="color: var(--muted); font-weight: 600">(Glass)</span> <span style="color: var(--accent); font-size: 12px">• %</span></span><input type="text" inputmode="decimal" value="" placeholder="مثال: 28" aria-label="الزجاج البركاني Glass"></label><label style="display: block"><span style="display: block; font-weight: 800; font-size: 14px; margin-bottom: 6px">البلاجيوكلاز <span style="color: var(--muted); font-weight: 600">(Plagioclase)</span> <span style="color: var(--accent); font-size: 12px">• %</span></span><input type="text" inputmode="decimal" value="" placeholder="مثال: 24" aria-label="البلاجيوكلاز Plagioclase"></label><label style="display: block"><span style="display: block; font-weight: 800; font-size: 14px; margin-bottom: 6px">حجم الحبيبات <span style="color: var(--muted); font-weight: 600">(D50)</span> <span style="color: var(--accent); font-size: 12px">• µm</span></span><input type="text" inputmode="decimal" value="" placeholder="مثال: 110" aria-label="حجم الحبيبات D50"></label><label style="display: block"><span style="display: block; font-weight: 800; font-size: 14px; margin-bottom: 6px">الحد الأدنى للحرارة <span style="color: var(--muted); font-weight: 600">(Temp Min)</span> <span style="color: var(--accent); font-size: 12px">• °C</span></span><input type="text" inputmode="decimal" value="" placeholder="مثال: 3" aria-label="الحد الأدنى للحرارة Temp Min"></label><label style="display: block"><span style="display: block; font-weight: 800; font-size: 14px; margin-bottom: 6px">الهطول السنوي <span style="color: var(--muted); font-weight: 600">(Precip)</span> <span style="color: var(--accent); font-size: 12px">• mm/year</span></span><input type="text" inputmode="decimal" value="" placeholder="مثال: 8" aria-label="الهطول السنوي Precip"></label><label style="display: block"><span style="display: block; font-weight: 800; font-size: 14px; margin-bottom: 6px">الحد الأقصى للحرارة (Temp Max) <span style="color: var(--accent); font-size: 12px">• °C</span></span><input type="text" id="f_TempMax" inputmode="decimal" placeholder="مثال: 42" aria-label="الحد الأقصى للحرارة Temp Max"></label><label style="display: block"><span style="display: block; font-weight: 800; font-size: 14px; margin-bottom: 6px">التباين الحراري اليومي (Diurnal Range) <span style="color: var(--accent); font-size: 12px">• °C</span></span><input type="text" id="f_Diurnal" inputmode="decimal" placeholder="بيتحسب تلقائي" aria-label="التباين الحراري اليومي Diurnal" readonly></label><label style="display: block"><span style="display: block; font-weight: 800; font-size: 14px; margin-bottom: 6px">حجب الضوء (Light Occlusion) <span style="color: var(--accent); font-size: 12px">• %</span></span><input type="text" id="f_Occlusion" inputmode="decimal" placeholder="0 أو 100" aria-label="حجب الضوء Occlusion"></label><label style="display: block"><span style="display: block; font-weight: 800; font-size: 14px; margin-bottom: 6px">ملاءمة البصمات الحيوية (Exobiology Suitability) <span style="color: var(--accent); font-size: 12px">• 0–100</span></span><input type="text" id="f_Exo" inputmode="decimal" placeholder="مثال: 85" aria-label="ملاءمة البصمات الحيوية Exo"></label></div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 14px; margin-top: 16px">
+        <fieldset style="border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin: 0">
+          <legend style="font-weight: 800; padding: 0 6px">التضاريس (Topography)</legend>
+          <button type="button" aria-pressed="false" style="width: 100%; margin-top: 6px; text-align: start; cursor: pointer; background: transparent; color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; font-weight: 700">جبلي — 90%</button><button type="button" aria-pressed="true" style="width: 100%; margin-top: 6px; text-align: start; cursor: pointer; background: var(--primary); color: var(--primary-ink); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; font-weight: 700">متوسط — 60%</button><button type="button" aria-pressed="false" style="width: 100%; margin-top: 6px; text-align: start; cursor: pointer; background: transparent; color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; font-weight: 700">سهل — 30%</button>
+        </fieldset>
+        <fieldset style="border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin: 0">
+          <legend style="font-weight: 800; padding: 0 6px">تغطية RADARSAT (RADARSAT Coverage)</legend>
+          <button type="button" aria-pressed="true" style="width: 100%; margin-top: 6px; text-align: start; cursor: pointer; background: var(--accent); color: #06121a; border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; font-weight: 700">تغطية كاملة — 100%</button><button type="button" aria-pressed="false" style="width: 100%; margin-top: 6px; text-align: start; cursor: pointer; background: transparent; color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; font-weight: 700">جزئية — 50%</button><button type="button" aria-pressed="false" style="width: 100%; margin-top: 6px; text-align: start; cursor: pointer; background: transparent; color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; font-weight: 700">غير متوفرة — 0%</button>
+        </fieldset>
+        <fieldset id="logisticsChoices" style="border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin: 0">
+          <legend style="font-weight: 800; padding: 0 6px">المسافة اللوجستية (Logistics Distance)</legend>
+          <button type="button" data-risk="low" aria-pressed="false" style="width: 100%; margin-top: 6px; text-align: start; cursor: pointer; background: transparent; color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; font-weight: 700">منخفضة — أقل من 25 كم (Low)</button><button type="button" data-risk="medium" aria-pressed="false" style="width: 100%; margin-top: 6px; text-align: start; cursor: pointer; background: transparent; color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; font-weight: 700">متوسطة — 25 إلى 200 كم (Medium)</button><button type="button" data-risk="high" aria-pressed="false" style="width: 100%; margin-top: 6px; text-align: start; cursor: pointer; background: transparent; color: var(--text); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; font-weight: 700">مرتفعة — أكثر من 200 كم (High)</button>
+          <p id="logisticsBadge" role="status" aria-live="polite" style="font-weight: 800; margin: 10px 0 0">— اختر مستوى المسافة اللوجستية</p>
+        </fieldset>
+        <div style="border: 1px solid var(--line); border-radius: 14px; padding: 14px">
+          <h3 style="margin: 0">الجيومورفولوجيا (Geomorphology)</h3>
+          <div class="choices-row" id="geoBtns" role="group" aria-label="اختيار نوع الجيومورفولوجيا" style="margin-top: 10px"></div>
+        </div>
+      </div>
+      <div style="margin-top: 14px; color: var(--muted); font-size: 13px; line-height: 1.7">مجموع الأكاسيد (Oxides Sum): <strong id="oxide-sum" class="mono" style="color: var(--text)">0.0%</strong> • الترتيب يحسب 11 معيارًا بأوزان الأولوية المختارة: الكيمياء، المعادن، الفيزياء، البيئة، RADARSAT، التضاريس، اللوجستيات، الجيومورفولوجيا، التقلبات الحرارية، الرؤية، وملاءمة الأحياء. القيم الفارغة تستخدم افتراضات موضحة في بطاقة النتيجة. الحد الأقصى للحرارة يعرض كدرجة إضافية ولا يدخل معادلة الأوزان الأساسية.</div>
+      <button type="button" style="margin-top: 16px; width: 100%; background: var(--primary); color: var(--primary-ink); border: none; border-radius: 14px; padding: 15px; font-size: 17px; font-weight: 900; cursor: pointer">قارِن مع القمر والمريخ (Compare with Moon &amp; Mars) →</button>
+    </section>
+    <section aria-label="النتائج" style="margin-top: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 20px">
+      <div style="display: flex; gap: 10px; align-items: center">
+        <!-- <Trophy /> -->
+        <h2 style="margin: 0; font-size: clamp(19px, 4vw, 25px)">النتائج <span style="color: var(--muted); font-size: 14px; font-weight: 600">(Results — مرتبة تنازليًا)</span></h2>
+      </div>
+      <p style="color: var(--muted); line-height: 1.8; margin: 14px 0 0">أدخل اسم الموقع والإحداثيات والبيانات المتاحة، ثم قارن النتيجة بالأهداف المرجعية. الحقول الفارغة تستخدم القيم الافتراضية الواردة في نموذج الحساب، لذلك أدخل أكبر قدر ممكن من البيانات.</p>
+      <div id="comparison-results" aria-live="polite" style="display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 12px; margin-top: 14px"></div>
+    </section>
+    <section aria-label="تنسيق البيانات والمصادر" style="margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 16px">
+      <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 20px">
+        <h2 style="margin: 0; font-size: 20px">تنسيق CSV <span style="color: var(--muted); font-size: 13px">(CSV Format)</span></h2>
+        <p style="color: var(--muted); line-height: 1.8; font-size: 13px">استخدم الترويسة التالية عند تجهيز بياناتك في جدول خارجي قبل إدخالها هنا. رفع الملفات غير متاح بعد.</p>
+        <p class="mono" style="background: #0a1120; border: 1px solid var(--line); border-radius: 12px; padding: 12px; font-size: 11px; line-height: 1.7; overflow-wrap: anywhere; direction: ltr; text-align: left">Site_Name,Latitude,Longitude,SiO2,Al2O3,TiO2,FeO,CaO,Glass,Plagioclase,D50_um,Precip,Temp_Min,Temp_Max,Diurnal,Seasonal,Occlusion,Exo_Score,Exo_Type,Geomorphology,Vehicle_Type,RADARSAT,Topography,Logistics_Risk,Source</p>
+      </div>
+      <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 20px">
+        <div style="display: flex; gap: 8px; align-items: center">
+          <!-- <Compass /> -->
+          <h2 style="margin: 0; font-size: 20px">المصادر <span style="color: var(--muted); font-size: 13px">(Sources)</span></h2>
+        </div>
+        <ul style="margin: 14px 0 0; padding-inline-start: 18px; line-height: 2; font-size: 14px">
+          <li><a href="https://pds.nasa.gov/" target="_blank" rel="noopener">NASA PDS — أرشيف عينات أبولو</a></li>
+          <li><a href="https://www.nasa.gov/mission_pages/LRO/main/" target="_blank" rel="noopener">LRO Diviner — بيانات القمر الحرارية والمعدنية</a></li>
+          <li><a href="https://www.asc-csa.gc.ca/eng/satellites/radarsat1/" target="_blank" rel="noopener">CSA RADARSAT-1 — خريطة حرارية من 36000 صورة (1995–2013)</a></li>
+          <li><a href="https://www.copernicus.eu/en" target="_blank" rel="noopener">Copernicus — بيانات رصد الأرض</a></li>
+          <li><a href="https://www.esri.com/en-us/arcgis/products/arcgis-online/overview" target="_blank" rel="noopener">Esri Topo — خرائط الأساس الطبوغرافية</a></li>
+        </ul>
+        <p style="color: var(--muted); font-size: 12px; line-height: 1.8; margin: 12px 0 0">محرك حسابي مدمج يعمل دون اتصال (Offline Self-Contained Engine). القيم المعروضة هي قيم مرجعية مبسطة للمقارنة التعليمية، وليست بديلًا عن التحليل المختبري.</p>
+      </div>
+    </section>
+  </main>
+<script>
+(() => {
+  const criteria = [
+    'الكيمياء Chemistry',
+    'المعدنية Mineralogy',
+    'الفيزيائية Physical',
+    'البيئة Environment',
+    'تغطية RADARSAT RADARSAT Coverage',
+    'التضاريس Terrain',
+    'اللوجستيات Logistics',
+    'الجيومورفولوجيا Geomorphology',
+    'التقلب الحراري Thermal Swings',
+    'الأحياء الخارجية Exobiology'
+  ];
+  const levels = [4, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1];
+  const prioritySection = document.querySelector('[aria-label="أولوية المعايير"]');
+  const sliderGrid = prioritySection.querySelector('input[type="range"]').closest('label').parentElement;
+  const extraCriteria = [
+    ['اللوجستيات', 'Logistics'],
+    ['الجيومورفولوجيا', 'Geomorphology'],
+    ['التقلب الحراري', 'Thermal Swings'],
+    ['الرؤية', 'Visibility'],
+    ['الأحياء الخارجية', 'Exobiology']
+  ];
+  extraCriteria.forEach(([arabicName, englishName], offset) => {
+    const index = offset + 6;
+    const label = document.createElement('label');
+    label.style.cssText = 'background:var(--surface-2);border:1px solid var(--line);border-radius:16px;padding:16px;display:block';
+    label.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-weight:800">${arabicName} <small style="color:var(--muted);font-weight:600">(${englishName})</small></span><span class="mono" style="background:var(--primary);color:var(--primary-ink);padding:3px 10px;border-radius:999px;font-weight:800">${levels[index]} / 5</span></div><input type="range" min="1" max="5" step="1" value="${levels[index]}" aria-label="${arabicName} ${englishName}" style="margin-top:14px"><div style="display:flex;justify-content:space-between;color:var(--muted-2);font-size:12px"><span>1 — أقل أولوية</span><span>الوزن النسبي: —</span><span>5 — أعلى أولوية</span></div>`;
+    sliderGrid.append(label);
+  });
+  const sliders = criteria.map((name, index) => {
+    const slider = prioritySection.querySelector(`[aria-label="${name}"]`);
+    if (!slider) return null;
+    slider.min = '1';
+    slider.max = '5';
+    slider.step = '1';
+    slider.value = String(levels[index]);
+    slider.setAttribute('aria-valuemin', '1');
+    slider.setAttribute('aria-valuemax', '5');
+    slider.setAttribute('aria-valuetext', `${levels[index]} من 5`);
+    const card = slider.closest('label');
+    const badges = card.querySelectorAll('.mono');
+    if (badges[0]) badges[0].textContent = `${levels[index]} / 5`;
+    const readout = [...card.querySelectorAll('span')].find((span) => span.textContent.includes('الوزن المُطبَّع'));
+    if (readout) readout.textContent = 'الوزن النسبي: 16.7%';
+    const scale = card.querySelector('div:last-child');
+    if (scale) {
+      scale.firstElementChild.textContent = '1 — أقل أولوية';
+      scale.lastElementChild.textContent = '5 — أعلى أولوية';
+    }
+    slider.style.setProperty('--fill', `${((levels[index] - 1) / 4) * 100}%`);
+    slider.addEventListener('input', () => {
+      levels[index] = Number(slider.value);
+      updateWeights();
+    });
+    return slider;
+  });
+
+  function updateWeights() {
+    const total = levels.reduce((sum, level) => sum + level, 0);
+    sliders.forEach((slider, index) => {
+      if (!slider) return;
+      const card = slider.closest('label');
+      const badges = card.querySelectorAll('.mono');
+      if (badges[0]) badges[0].textContent = `${levels[index]} / 5`;
+      const readout = [...card.querySelectorAll('span')].find((span) => span.textContent.includes('الوزن'));
+      if (readout) readout.textContent = `الوزن النسبي: ${total ? (levels[index] / total * 100).toFixed(1) : '0.0'}%`;
+      slider.style.setProperty('--fill', `${((levels[index] - 1) / 4) * 100}%`);
+      slider.setAttribute('aria-valuetext', `${levels[index]} من 5`);
+    });
+    const summary = document.getElementById('weights-summary');
+    summary.querySelector('.mono').textContent = `${total} / ${levels.length * 5}`;
+    summary.style.background = total > 0 ? 'rgba(52,211,153,.12)' : 'rgba(251,191,36,.12)';
+    summary.querySelector('span[style]').textContent = total > 0
+      ? 'تم توزيع الأوزان نسبيًا تلقائيًا؛ المستوى 5 له الوزن الأكبر.'
+      : 'اختر مستوى واحدًا على الأقل لكل معيار.';
+  }
+
+  prioritySection.querySelectorAll('button').forEach((button, index) => {
+    button.addEventListener('click', () => {
+      if (index === 0) {
+        updateWeights();
+        document.querySelector('#weights-summary span[style]').textContent = 'اكتمل التطبيع تلقائيًا؛ مجموع الأوزان النسبية يساوي 100%.';
+        return;
+      }
+      levels.fill(3);
+      sliders.forEach((slider, i) => { if (slider) slider.value = String(levels[i]); });
+      updateWeights();
+    });
+  });
+  updateWeights();
+
+  const experimentProfiles = [
+    [5, 5, 3, 2, 2, 3, 1, 1, 1, 1, 1],
+    [2, 2, 5, 3, 2, 5, 2, 2, 3, 1, 1],
+    [2, 2, 3, 5, 2, 5, 2, 3, 3, 2, 4]
+  ];
+  document.querySelectorAll('[aria-label="اختيار نوع التجربة"] button').forEach((button, index) => {
+    button.addEventListener('click', () => {
+      levels.splice(0, levels.length, ...experimentProfiles[index]);
+      sliders.forEach((slider, i) => { if (slider) slider.value = String(levels[i]); });
+      document.querySelectorAll('[aria-label="اختيار نوع التجربة"] button').forEach((option, i) => {
+        option.setAttribute('aria-pressed', String(i === index));
+        option.style.background = i === index ? 'var(--primary)' : 'var(--surface-2)';
+        option.style.color = i === index ? 'var(--primary-ink)' : 'var(--text)';
+        option.style.border = i === index ? '2px solid var(--primary)' : '1px solid var(--line)';
+      });
+      updateWeights();
+    });
+  });
+
+  const siteSection = document.querySelector('[aria-label="بيانات الموقع الأرضي"]');
+  const fields = [...siteSection.querySelectorAll('input[type="text"]')];
+  const fieldFor = (label) => fields.find((field) => field.getAttribute('aria-label') === label);
+  const siteInputGrid = fields[0].closest('label').parentElement;
+  const addNumberField = (id, labelText, placeholder) => {
+    const label = document.createElement('label');
+    label.style.display = 'block';
+    const caption = document.createElement('span');
+    caption.style.cssText = 'display:block;font-weight:800;font-size:14px;margin-bottom:6px';
+    caption.textContent = labelText;
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.id = id;
+    input.inputMode = 'decimal';
+    input.placeholder = placeholder;
+    input.setAttribute('aria-label', labelText);
+    label.append(caption, input);
+    siteInputGrid.append(label);
+    fields.push(input);
+    return input;
+  };
+  const addSelectField = (id, labelText, choices) => {
+    const label = document.createElement('label');
+    label.style.display = 'block';
+    const caption = document.createElement('span');
+    caption.style.cssText = 'display:block;font-weight:800;font-size:14px;margin-bottom:6px';
+    caption.textContent = labelText;
+    const select = document.createElement('select');
+    select.id = id;
+    select.setAttribute('aria-label', labelText);
+    choices.forEach(([value, text]) => {
+      const option = document.createElement('option');
+      option.value = value;
+      option.textContent = text;
+      select.append(option);
+    });
+    label.append(caption, select);
+    siteInputGrid.append(label);
+    return select;
+  };
+  const seasonalField = addNumberField('f_TempSeasonal', 'التباين الحراري الموسمي (Seasonal Range)', 'مثال: 40°C');
+  const exobiologyTypeField = addSelectField('f_ExoType', 'نوع الأحياء الدقيقة (Exobiology Type)', [
+    ['', 'اتركه فارغًا لاستخدام الافتراضي'],
+    ['extremophile', 'كائنات محبة للظروف القاسية (Extremophile)'],
+    ['sterile', 'بيئة معقمة (Sterile)']
+  ]);
+  const vehicleTypeField = addSelectField('f_VehicleType', 'وسيلة الوصول (Vehicle Type)', [
+    ['', 'اتركه فارغًا لاستخدام الافتراضي (4×4)'],
+    ['4x4', 'مركبة دفع رباعي (4×4)'],
+    ['helicopter_required', 'تتطلب مروحية (Helicopter required)'],
+    ['standard', 'وصول عادي (Standard)']
+  ]);
+  const sites = [
+    ['جبل إتنا', '37.75', '14.99'],
+    ['أتاكاما', '-23.50', '-68.20'],
+    ['جزيرة ديفون', '75.30', '-84.60'],
+    ['وادي الحيتان', '29.27', '30.02'],
+    ['الواحات البحرية', '28.35', '28.88']
+  ];
+  const siteButtons = [...siteSection.querySelectorAll('button')];
+  const refsNew = [
+    { id: 'apollo14', name: 'Apollo 14 — Fra Mauro', body: 'Moon', reference: 'NASA PDS — Sample 14259', sio2: 48.1, al2o3: 17, tio2: 1.8, feo: 10.1, cao: 10.7, glass: 47.7, plagioclase: 24.6, grainD50: 48.4, tempMin: -170, tempMax: 120, precipitation: 0, deltaTdiurnal: 290, deltaTseasonal: 5, geomorphology: 'impact_crater', occlusion: 0, exobiologyType: 'sterile', exoSuitability: 5 },
+    { id: 'shackleton', name: 'Shackleton Crater', body: 'Moon', reference: 'LRO Diviner / Artemis Base', sio2: 45, al2o3: 25, tio2: 0.5, feo: 5, cao: 15, glass: 20, plagioclase: 60, grainD50: 50, tempMin: -223, tempMax: -73, precipitation: 0, deltaTdiurnal: 0, deltaTseasonal: 2, geomorphology: 'lava_tube_psr', occlusion: 100, exobiologyType: 'sterile', exoSuitability: 5 },
+    { id: 'jezero', name: 'Jezero Crater', body: 'Mars', reference: 'Perseverance Rover', sio2: 43.5, al2o3: 9.2, tio2: 0.8, feo: 18.5, cao: 6.8, glass: 15, plagioclase: 18, grainD50: 100, tempMin: -125, tempMax: 20, precipitation: 0, deltaTdiurnal: 75, deltaTseasonal: 145, geomorphology: 'river_delta', occlusion: 50, exobiologyType: 'extremophile', exoSuitability: 100 },
+    { id: 'gale', name: 'Gale Crater', body: 'Mars', reference: 'Curiosity Rover', sio2: 42, al2o3: 11, tio2: 1.1, feo: 19.8, cao: 7.5, glass: 10, plagioclase: 20, grainD50: 120, tempMin: -100, tempMax: 20, precipitation: 0, deltaTdiurnal: 90, deltaTseasonal: 120, geomorphology: 'sedimentary_alluvial', occlusion: 40, exobiologyType: 'extremophile', exoSuitability: 85 }
+  ];
+  const geoLabels = {
+    impact_crater: 'فوهة اصطدام',
+    lava_tube_psr: 'أنبوب لافا / منطقة مظللة',
+    river_delta: 'دلتا نهرية',
+    sedimentary_alluvial: 'رواسب ومراوح طميية',
+    basaltic_plain: 'سهل بازلتي'
+  };
+  let geoSel = null;
+  const geoButtons = document.getElementById('geoBtns');
+  function renderGeo() {
+    geoButtons.replaceChildren();
+    Object.entries(geoLabels).forEach(([key, label]) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = label;
+      button.dataset.value = key;
+      button.setAttribute('aria-pressed', String(geoSel === key));
+      button.addEventListener('click', () => {
+        geoSel = key;
+        renderGeo();
+      });
+      geoButtons.append(button);
+    });
+  }
+  renderGeo();
+
+  const logisticsBadge = document.getElementById('logisticsBadge');
+  const logisticsChoices = document.getElementById('logisticsChoices');
+  function updateLogisticsBadge(selectedButton) {
+    const risk = selectedButton?.dataset.risk;
+    const messages = {
+      low: ['مستوى الخطر اللوجستي: منخفض (Low) — أقل من 25 كم', 'var(--green)'],
+      medium: ['مستوى الخطر اللوجستي: متوسط (Medium) — 25 إلى 200 كم', 'var(--yellow)'],
+      high: ['مستوى الخطر اللوجستي: مرتفع (High) — أكثر من 200 كم', 'var(--red)']
+    };
+    const [message, color] = messages[risk] || ['— اختر مستوى المسافة اللوجستية', 'var(--muted)'];
+    logisticsBadge.textContent = message;
+    logisticsBadge.style.color = color;
+  }
+
+  const loadSite = (site) => {
+    fieldFor('اسم الموقع Site Name').value = site[0];
+    fieldFor('خط العرض Latitude').value = site[1];
+    fieldFor('خط الطول Longitude').value = site[2];
+    updateOxideSum();
+  };
+  siteButtons.forEach((button) => {
+    const site = sites.find(([name]) => button.textContent.includes(name));
+    if (site) button.addEventListener('click', () => loadSite(site));
+  });
+  siteButtons.find((button) => button.textContent.includes('حمِّل مثالًا جاهزًا'))
+    ?.addEventListener('click', () => loadSite(sites[4]));
+  siteButtons.find((button) => button.textContent.includes('مسح النموذج'))
+    ?.addEventListener('click', () => {
+      fields.forEach((field) => { field.value = ''; });
+      geoSel = null;
+      renderGeo();
+      siteSection.querySelectorAll('fieldset').forEach((group, index) => {
+        const selectedIndex = index === 0 ? 1 : index === 1 ? 0 : -1;
+        group.querySelectorAll('button').forEach((button, buttonIndex) => {
+          const selected = buttonIndex === selectedIndex;
+          button.setAttribute('aria-pressed', String(selected));
+          button.style.background = selected ? (index === 0 ? 'var(--primary)' : 'var(--accent)') : 'transparent';
+          button.style.color = selected && index === 0 ? 'var(--primary-ink)' : selected ? '#06121a' : 'var(--text)';
+        });
+      });
+      updateOxideSum();
+      updateDiurnalRange();
+      updateLogisticsBadge(null);
+      exobiologyTypeField.value = '';
+      vehicleTypeField.value = '';
+      comparisonResults.replaceChildren();
+      results.querySelector('p').textContent = 'أدخل اسم الموقع والإحداثيات والبيانات المتاحة، ثم قارن النتيجة بالأهداف المرجعية. الحقول الفارغة تستخدم افتراضات نموذج الحساب.';
+      results.querySelector('p').style.color = 'var(--muted)';
+    });
+
+  siteSection.querySelectorAll('fieldset').forEach((group) => {
+    group.querySelectorAll('button').forEach((button) => {
+      button.addEventListener('click', () => {
+        group.querySelectorAll('button').forEach((option) => {
+          option.setAttribute('aria-pressed', String(option === button));
+          option.style.background = option === button ? 'var(--primary)' : 'transparent';
+          option.style.color = option === button ? 'var(--primary-ink)' : 'var(--text)';
+        });
+        if (group === logisticsChoices) updateLogisticsBadge(button);
+      });
+    });
+  });
+
+  const oxideFields = ['السيليكا SiO2', 'الألومينا Al2O3', 'أكسيد التيتانيوم TiO2', 'أكسيد الحديد FeO', 'أكسيد الكالسيوم CaO'];
+  const oxideOutput = document.getElementById('oxide-sum');
+  function updateOxideSum() {
+    const sum = oxideFields.reduce((total, label) => total + (Number(fieldFor(label).value) || 0), 0);
+    oxideOutput.textContent = `${sum.toFixed(1)}%`;
+  }
+  const tempMinField = fieldFor('الحد الأدنى للحرارة Temp Min');
+  tempMinField.id = 'f_TempMin';
+  const tempMaxField = siteSection.querySelector('#f_TempMax');
+  const diurnalField = siteSection.querySelector('#f_Diurnal');
+  function updateDiurnalRange() {
+    const minValue = tempMinField.value.trim();
+    const maxValue = tempMaxField.value.trim();
+    if (!minValue || !maxValue || !Number.isFinite(Number(minValue)) || !Number.isFinite(Number(maxValue)) || Number(maxValue) < Number(minValue)) {
+      diurnalField.value = '';
+      return;
+    }
+    diurnalField.value = (Number(maxValue) - Number(minValue)).toFixed(1).replace(/\.0$/, '');
+  }
+  fields.forEach((field) => field.addEventListener('input', updateOxideSum));
+  tempMinField.addEventListener('input', updateDiurnalRange);
+  tempMaxField.addEventListener('input', updateDiurnalRange);
+  updateOxideSum();
+  updateDiurnalRange();
+
+  const compareButton = siteButtons.find((button) => button.textContent.includes('قارِن مع القمر والمريخ'));
+  const results = document.querySelector('[aria-label="النتائج"]');
+  const comparisonResults = document.getElementById('comparison-results');
+  const categoryWeights = {
+    chemistry: () => levels[0],
+    mineralogy: () => levels[1],
+    physical: () => levels[2],
+    environment: () => levels[3],
+    radarsat: () => levels[4],
+    topography: () => levels[5],
+    logistics: () => levels[6],
+    geomorphology: () => levels[7],
+    thermal_swings: () => levels[8],
+    visibility: () => levels[9],
+    exobiology: () => levels[10]
+  };
+  const similarity = (actual, reference, range) => Math.max(0, 100 * (1 - Math.abs(actual - reference) / range));
+  const metricLabels = {
+    chemistry: 'الكيمياء', mineralogy: 'المعدنية', physical: 'الفيزيائية', environment: 'البيئة',
+    radarsat: 'تغطية RADARSAT', topography: 'التضاريس', logistics: 'اللوجستيات',
+    geomorphology: 'الجيومورفولوجيا', thermal_swings: 'التقلب الحراري', visibility: 'الرؤية', exobiology: 'الأحياء الخارجية'
+  };
+
+  function readNumber(field, fallback) {
+    const raw = field?.value.trim() ?? '';
+    return { value: raw === '' ? fallback : Number(raw), usedDefault: raw === '' };
+  }
+
+  function getSelectedScore(group, fallback) {
+    const selected = group?.querySelector('button[aria-pressed="true"]');
+    if (!selected) return fallback;
+    const match = selected.textContent.match(/(\d+(?:\.\d+)?)\s*%/);
+    return match ? Number(match[1]) : fallback;
+  }
+
+  function evaluateSiteAgainstTargets() {
+    const inputs = {
+      sio2: readNumber(fieldFor('السيليكا SiO2'), 45),
+      al2o3: readNumber(fieldFor('الألومينا Al2O3'), 15),
+      tio2: readNumber(fieldFor('أكسيد التيتانيوم TiO2'), 1.5),
+      feo: readNumber(fieldFor('أكسيد الحديد FeO'), 10),
+      cao: readNumber(fieldFor('أكسيد الكالسيوم CaO'), 10),
+      glass: readNumber(fieldFor('الزجاج البركاني Glass'), 30),
+      plagioclase: readNumber(fieldFor('البلاجيوكلاز Plagioclase'), 25),
+      grainD50: readNumber(fieldFor('حجم الحبيبات D50'), 100),
+      tempMin: readNumber(tempMinField, 0),
+      tempMax: readNumber(tempMaxField, 0),
+      precipitation: readNumber(fieldFor('الهطول السنوي Precip'), 50),
+      deltaTdiurnal: readNumber(diurnalField, 20),
+      deltaTseasonal: readNumber(seasonalField, 30),
+      occlusion: readNumber(siteSection.querySelector('#f_Occlusion'), 0),
+      exo: readNumber(siteSection.querySelector('#f_Exo'), 50),
+      exobiologyType: exobiologyTypeField.value || 'extremophile',
+      geomorphology: geoSel || 'impact_crater',
+      radarsat: getSelectedScore(siteSection.querySelectorAll('fieldset')[1], 100),
+      topography: getSelectedScore(siteSection.querySelectorAll('fieldset')[0], 90),
+      logisticsRisk: logisticsChoices.querySelector('button[aria-pressed="true"]')?.dataset.risk || 'medium',
+      vehicleType: vehicleTypeField.value || '4x4'
+    };
+
+    const numericRanges = {
+      sio2: [0, 100], al2o3: [0, 100], tio2: [0, 100], feo: [0, 100], cao: [0, 100],
+      glass: [0, 100], plagioclase: [0, 100], grainD50: [0, 10000], tempMin: [-273.15, 200],
+      tempMax: [-273.15, 300], precipitation: [0, 100000], deltaTdiurnal: [0, 500],
+      deltaTseasonal: [0, 500], occlusion: [0, 100], exo: [0, 100]
+    };
+    const invalid = Object.entries(numericRanges).find(([key, [min, max]]) => {
+      const { value, usedDefault } = inputs[key];
+      return !usedDefault && (!Number.isFinite(value) || value < min || value > max);
+    });
+    if (invalid) return { error: `تحقق من قيمة ${metricLabels[invalid[0]] || invalid[0]}؛ القيمة خارج النطاق المسموح.` };
+
+    const value = (key) => inputs[key].value;
+    const chemDefaults = { sio2: 45, al2o3: 15, tio2: 1.5, feo: 10, cao: 10 };
+    const categoryNames = Object.keys(categoryWeights);
+    const usedDefaults = Object.entries(inputs)
+      .filter(([, entry]) => entry && typeof entry === 'object' && entry.usedDefault)
+      .map(([key]) => key);
+    if (!geoSel) usedDefaults.push('geomorphology');
+    if (!logisticsChoices.querySelector('button[aria-pressed="true"]')) usedDefaults.push('logisticsRisk');
+    if (!siteSection.querySelectorAll('fieldset')[1].querySelector('button[aria-pressed="true"]')) usedDefaults.push('radarsat');
+    if (!exobiologyTypeField.value) usedDefaults.push('exobiologyType');
+    if (!vehicleTypeField.value) usedDefaults.push('vehicleType');
+    const resultsForTargets = refsNew.map((target) => {
+      const sSiO2 = similarity(value('sio2'), target.sio2, 30);
+      const sAl2O3 = similarity(value('al2o3'), target.al2o3, 20);
+      const sTiO2 = similarity(value('tio2'), target.tio2, 5);
+      const sFeO = similarity(value('feo'), target.feo, 15);
+      const sCaO = similarity(value('cao'), target.cao, 15);
+      const chemistry = sSiO2 * 0.30 + sAl2O3 * 0.25 + sFeO * 0.20 + sCaO * 0.15 + sTiO2 * 0.10;
+      const mineralogy = (similarity(value('glass'), target.glass, 50) + similarity(value('plagioclase'), target.plagioclase, 50)) / 2;
+      const physical = similarity(value('grainD50'), target.grainD50, 150);
+      const tempMinScore = similarity(value('tempMin'), target.tempMin, 250);
+      const precipitationScore = similarity(value('precipitation'), target.precipitation, 1000);
+      const environment = tempMinScore * 0.6 + precipitationScore * 0.4;
+      const maxTempSupplement = similarity(value('tempMax'), target.tempMax, 250);
+      const radarsat = inputs.radarsat;
+      const topography = inputs.topography;
+      let logistics = inputs.logisticsRisk === 'low' ? 100 : inputs.logisticsRisk === 'high' ? 20 : 60;
+      if (inputs.vehicleType === '4x4') logistics *= 0.9;
+      else if (inputs.vehicleType === 'helicopter_required') logistics *= 0.6;
+      const siteGeo = inputs.geomorphology;
+      let geomorphology = 40;
+      if (siteGeo === target.geomorphology) geomorphology = 100;
+      else if (['impact_crater', 'lava_tube_psr'].includes(siteGeo) && ['impact_crater', 'lava_tube_psr'].includes(target.geomorphology)) geomorphology = 85;
+      else if (['river_delta', 'sedimentary_alluvial'].includes(siteGeo) && ['river_delta', 'sedimentary_alluvial'].includes(target.geomorphology)) geomorphology = 80;
+      const thermalDiurnal = similarity(value('deltaTdiurnal'), target.deltaTdiurnal, 200);
+      const thermalSeasonal = similarity(value('deltaTseasonal'), target.deltaTseasonal, 150);
+      const thermalSwings = (thermalDiurnal + thermalSeasonal) / 2;
+      const visibility = similarity(value('occlusion'), target.occlusion, 100);
+      const exobiologyTypeScore = inputs.exobiologyType === target.exobiologyType ? 100 : 50;
+      const exobiologyNumericScore = similarity(value('exo'), target.exoSuitability, 100);
+      const exobiology = (exobiologyTypeScore + exobiologyNumericScore) / 2;
+      const scores = {
+        chemistry, mineralogy, physical, environment, radarsat, topography, logistics,
+        geomorphology, thermal_swings: thermalSwings, visibility, exobiology
+      };
+      const totalWeight = categoryNames.reduce((sum, category) => sum + categoryWeights[category](), 0);
+      const totalScore = totalWeight
+        ? categoryNames.reduce((sum, category) => sum + scores[category] * categoryWeights[category](), 0) / totalWeight
+        : 0;
+      const roundedScores = Object.fromEntries(Object.entries(scores).map(([key, score]) => [key, Number(score.toFixed(1))]));
+      const pros = Object.entries(roundedScores).filter(([, score]) => score >= 80).map(([key]) => key);
+      const cons = Object.entries(roundedScores).filter(([, score]) => score < 50).map(([key]) => key);
+      const roundedTotal = Number(totalScore.toFixed(1));
+      return {
+        target,
+        scores: roundedScores,
+        pros,
+        cons,
+        totalScore: roundedTotal,
+        verdict: roundedTotal >= 80 ? 'ممتاز (Excellent)' : roundedTotal >= 60 ? 'متوسط (Moderate)' : 'ضعيف (Weak)',
+        verdictColor: roundedTotal >= 80 ? 'var(--green)' : roundedTotal >= 60 ? 'var(--yellow)' : 'var(--red)',
+        maxTempSupplement: Number(maxTempSupplement.toFixed(1)),
+        usedDefaults: [...new Set(usedDefaults)]
+      };
+    }).sort((a, b) => b.totalScore - a.totalScore);
+
+    return { results: resultsForTargets, inputs, chemistryTotal: ['sio2', 'al2o3', 'tio2', 'feo', 'cao'].reduce((sum, key) => sum + value(key), 0) };
+  }
+
+  if (compareButton) compareButton.addEventListener('click', () => {
+    const name = fieldFor('اسم الموقع Site Name').value.trim();
+    const latitudeValue = fieldFor('خط العرض Latitude').value.trim();
+    const longitudeValue = fieldFor('خط الطول Longitude').value.trim();
+    const latitude = Number(latitudeValue);
+    const longitude = Number(longitudeValue);
+    const message = results.querySelector('p');
+    comparisonResults.replaceChildren();
+    if (!name || !latitudeValue || !longitudeValue || !Number.isFinite(latitude) || !Number.isFinite(longitude) || latitude < -90 || latitude > 90 || longitude < -180 || longitude > 180) {
+      message.textContent = 'أدخل اسم الموقع وخط العرض بين −90 و90 وخط الطول بين −180 و180 قبل المتابعة.';
+      message.style.color = 'var(--yellow)';
+      results.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    const evaluation = evaluateSiteAgainstTargets();
+    if (evaluation.error) {
+      message.textContent = evaluation.error;
+      message.style.color = 'var(--yellow)';
+      results.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    message.textContent = `نتائج «${name}» مرتبة حسب مجموع المطابقة الموزون من 11 معيارًا.`;
+    message.style.color = 'var(--accent)';
+    evaluation.results.forEach(({ target, scores, pros, cons, totalScore, verdict, verdictColor, maxTempSupplement, usedDefaults }, index) => {
+      const card = document.createElement('article');
+      card.style.cssText = 'background:var(--surface-2);border:1px solid var(--line);border-radius:14px;padding:14px';
+      const heading = document.createElement('h3');
+      heading.style.cssText = 'margin:0 0 8px;display:flex;justify-content:space-between;gap:8px;align-items:center';
+      const referenceName = document.createElement('span');
+      referenceName.textContent = `${index + 1}. ${target.name} (${target.body})`;
+      const scoreBadge = document.createElement('strong');
+      scoreBadge.style.color = 'var(--primary)';
+      scoreBadge.textContent = `${totalScore.toFixed(1)}%`;
+      heading.append(referenceName, scoreBadge);
+      const reference = document.createElement('p');
+      reference.style.cssText = 'margin:0 0 8px;color:var(--muted-2);font-size:11px';
+      reference.textContent = `المرجع: ${target.reference} • ${verdict}`;
+      reference.style.color = verdictColor;
+      const list = document.createElement('ul');
+      list.style.cssText = 'margin:0;padding-inline-start:20px;color:var(--muted);font-size:13px;line-height:1.8';
+      Object.entries(scores).forEach(([key, score]) => {
+        const item = document.createElement('li');
+        item.textContent = `${metricLabels[key]}: ${score.toFixed(1)}% (وزن ${categoryWeights[key]()})`;
+        list.append(item);
+      });
+      const maxTemperature = document.createElement('p');
+      maxTemperature.style.cssText = 'margin:8px 0 0;color:var(--muted);font-size:12px';
+      maxTemperature.textContent = `مطابقة إضافية للحد الأقصى للحرارة: ${maxTempSupplement.toFixed(1)}% (ليست ضمن معادلة الأوزان المقدمة).`;
+      const gapAnalysis = document.createElement('p');
+      gapAnalysis.style.cssText = 'margin:8px 0 0;color:var(--muted);font-size:12px;line-height:1.7';
+      gapAnalysis.textContent = `نقاط القوة (≥80): ${pros.length ? pros.map((key) => metricLabels[key]).join('، ') : 'لا توجد'} • الفجوات (<50): ${cons.length ? cons.map((key) => metricLabels[key]).join('، ') : 'لا توجد'}`;
+      const defaultsNotice = document.createElement('p');
+      defaultsNotice.style.cssText = 'margin:8px 0 0;color:var(--muted-2);font-size:11px';
+      defaultsNotice.textContent = usedDefaults.length
+        ? `استُخدمت قيم افتراضية للحقول الفارغة (${usedDefaults.length})؛ أدخل بيانات الموقع لتحسين النتيجة.`
+        : 'جميع قيم المقارنة أُدخلت يدويًا.';
+      const disclaimer = document.createElement('p');
+      disclaimer.style.cssText = 'margin:10px 0 0;color:var(--muted-2);font-size:11px';
+      disclaimer.textContent = 'نتيجة تعليمية تقريبية مبنية على baseline المذكور؛ ليست تقييمًا ميدانيًا موثقًا.';
+      card.append(heading, reference, list, maxTemperature, gapAnalysis, defaultsNotice, disclaimer);
+      comparisonResults.append(card);
+    });
+    results.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();
+</script>
+</div>
+</body>
+</html>
